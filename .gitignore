@@ -15,4 +15,7 @@ CMakeUserPresets.json
 # Build folder ignore
 build
 out
+
+#ccls 
+.cache
 compile_commands.json

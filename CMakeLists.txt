@@ -11,6 +11,10 @@ if(BUILD_EXAMPLES)
     add_subdirectory(examples)
 endif()
 
+if(BUILD_DOC)
+    add_subdirectory(doc)
+endif()
+
 if(BUILD_TESTING)
     include(CTest)
     enable_testing()

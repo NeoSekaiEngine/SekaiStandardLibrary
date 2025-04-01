@@ -9,6 +9,8 @@ Standard library for NeoSekaiEngine and related projects
 ## Requirements
 
 * CMake version 3.5 or above
+* Doxygen version 1.11.0 or above
+* Graphviz version 12.0.0 or above
 
 ## Installation
 

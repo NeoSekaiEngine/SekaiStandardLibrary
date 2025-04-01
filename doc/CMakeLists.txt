@@ -1,0 +1,15 @@
+set(DOXYGEN_INPUT_FILES
+    ${CMAKE_SOURCE_DIR}/README.md
+    ${CMAKE_SOURCE_DIR}/THIRD_PARTY_NOTICES.md
+    ${CMAKE_SOURCE_DIR}/library/include/external
+)
+
+find_package(Doxygen REQUIRED dot)
+if(${DOXYGEN_FOUND})
+    set(DOXYGEN_GENERATE_HTML TRUE)
+    set(DOXYGEN_FULL_PATH_NAMES NO)
+    set(DOXYGEN_USE_MDFILE_AS_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md")
+    set(DOXYGEN_PROJECT_NAME ${PROJECT_NAME})
+    set(DOXYGEN_EXAMPLE_PATH ${CMAKE_SOURCE_DIR}/examples)
+    doxygen_add_docs(LibraryDocs ${DOXYGEN_INPUT_FILES} COMMENT "Generate ${PROJECT_NAME} document" )
+endif()

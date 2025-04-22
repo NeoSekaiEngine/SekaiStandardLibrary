@@ -6,6 +6,8 @@ set(SEKAI_STANDARD_LIBRARY_SOURCES
 
 add_library(SekaiStandardLibrary ${SEKAI_STANDARD_LIBRARY_SOURCES})
 
+set_property(TARGET SekaiStandardLibrary PROPERTY C_STANDARD 90)
+
 target_include_directories(SekaiStandardLibrary
     PUBLIC
         $<INSTALL_INTERFACE:include>

@@ -1,43 +1,31 @@
-#ifndef _SEKAI_STANDARD_LIBRARY_PRIMITIVE_TYPES_H_
-#define _SEKAI_STANDARD_LIBRARY_PRIMITIVE_TYPES_H_
+#ifndef SEKAI_STANDARD_LIBRARY_PRIMITIVE_TYPES_H_
+#define SEKAI_STANDARD_LIBRARY_PRIMITIVE_TYPES_H_
 
-#ifdef _MSC_VER
-// Integer number
-typedef __int8           sk_int8;
-typedef unsigned __int8  sk_uint8;
-typedef __int16          sk_int16;
-typedef unsigned __int16 sk_uint16;
-typedef __int32          sk_int32;
-typedef unsigned __int32 sk_uint32;
-typedef __int64          sk_int64;
-typedef unsigned __int64 sk_uint64;
+/* Determine system architecture */
+#if defined(__x86_64__) || defined(_M_X64)  /* 64-bit system */
+    typedef signed char        sk_i8;
+    typedef signed short       sk_i16;
+    typedef signed int         sk_i32;
+    typedef signed long long   sk_i64;
 
-//Boolean
-typedef __int8           sk_bool;
+    typedef unsigned char      sk_u8;
+    typedef unsigned short     sk_u16;
+    typedef unsigned int       sk_u32;
+    typedef unsigned long long sk_u64;
+#else  /* 32-bit system */
+    typedef signed char        sk_i8;
+    typedef signed short       sk_i16;
+    typedef signed int         sk_i32;
+    typedef signed long long   sk_i64;  
 
-//Memory
-typedef __int8           sk_byte;
-#else
-#endif//_MSC_VER
+    typedef unsigned char      sk_u8;
+    typedef unsigned short     sk_u16;
+    typedef unsigned int       sk_u32;
+    typedef unsigned long long sk_u64;
+#endif
 
-//Integer number
-typedef sk_int16         sk_word;
-typedef sk_uint16        sk_uword;
-typedef sk_int32         sk_int;
-typedef sk_uint32        sk_uint;
-typedef sk_int           sk_long;
-typedef sk_uint          sk_ulong;
-typedef sk_int64         sk_longlong;
-typedef sk_uint64        sk_ulonglong;
+/* Define floating point types */
+typedef float  sk_f32;
+typedef double sk_f64;
 
-//Real number
-typedef float            sk_float;
-typedef double           sk_double; 
-
-//Character
-typedef char             sk_char;
-
-#define sk_true  ((sk_bool)0x1)
-#define sk_false ((sk_bool)0x0)
-
-#endif//!_SEKAI_STANDARD_LIBRARY_PRIMITIVE_TYPES_H_
+#endif //!SEKAI_STANDARD_LIBRARY_PRIMITIVE_TYPES_H_

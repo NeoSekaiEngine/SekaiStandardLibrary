@@ -2,6 +2,7 @@ project(SekaiStandardLibrary VERSION 0.0.0)
 
 set(SEKAI_STANDARD_LIBRARY_SOURCES
     ./src/SekaiStandardLibrary.c
+    ./src/arraylist.c
 )
 
 add_library(SekaiStandardLibrary ${SEKAI_STANDARD_LIBRARY_SOURCES})

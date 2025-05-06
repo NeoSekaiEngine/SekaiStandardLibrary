@@ -14,5 +14,7 @@ TEST(SizeOfTest, PrimitiveTypes) {
 
     EXPECT_EQ(sizeof(sk_f32), 4);
     EXPECT_EQ(sizeof(sk_f64), 8);
+
+    EXPECT_EQ(sizeof(sk_size), sizeof(void*)); 
 }
 

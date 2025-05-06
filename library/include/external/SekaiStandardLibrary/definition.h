@@ -1,0 +1,10 @@
+#ifndef SEKAI_STANDARD_LIBRARY_DEFINITION_H_
+#define SEKAI_STANDARD_LIBRARY_DEFINITION_H_
+
+#include <stddef.h>
+
+#define SK_TRUE  (0x1)
+#define SK_FALSE (0x0)
+
+
+#endif//!SEKAI_STANDARD_LIBRARY_DEFINITION_H_

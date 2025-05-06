@@ -12,6 +12,7 @@
     typedef unsigned short     sk_u16;
     typedef unsigned int       sk_u32;
     typedef unsigned long long sk_u64;
+    typedef unsigned long long sk_size;
 #else  /* 32-bit system */
     typedef signed char        sk_i8;
     typedef signed short       sk_i16;
@@ -22,6 +23,7 @@
     typedef unsigned short     sk_u16;
     typedef unsigned int       sk_u32;
     typedef unsigned long long sk_u64;
+    typedef unsigned long      sk_size;
 #endif
 
 /* Define floating point types */
@@ -30,5 +32,6 @@ typedef double sk_f64;
 
 /* Define other types */
 typedef sk_u8 sk_byte;
+typedef sk_u8 sk_bool;
 
 #endif //!SEKAI_STANDARD_LIBRARY_PRIMITIVE_TYPES_H_

@@ -28,4 +28,7 @@
 typedef float  sk_f32;
 typedef double sk_f64;
 
+/* Define other types */
+typedef sk_u8 sk_byte;
+
 #endif //!SEKAI_STANDARD_LIBRARY_PRIMITIVE_TYPES_H_

@@ -15,6 +15,7 @@ FetchContent_MakeAvailable(googletest)
 
 add_executable(SekaiStandardLibraryTest
     ./src/primitive-types.cpp
+    ./src/arraylist.cpp
 )
 
 target_link_libraries(SekaiStandardLibraryTest PRIVATE 

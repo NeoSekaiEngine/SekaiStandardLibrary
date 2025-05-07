@@ -3,12 +3,20 @@
 
 #include "SekaiStandardLibrary/primitive-types.h"
 
-typedef struct _sk_arraylist sk_arraylist;
-
 #ifdef __cplusplus
 extern "C"
 {
 #endif
+
+struct _sk_arraylist
+{
+    void* _data;
+    sk_size _elementSize;
+    sk_size size;
+    sk_size capacity;
+};
+
+typedef struct _sk_arraylist sk_arraylist;
 
 sk_bool sk_arraylist_init(sk_arraylist* lst, sk_size elementSize);
 sk_bool sk_arraylist_destroy(sk_arraylist* lst);

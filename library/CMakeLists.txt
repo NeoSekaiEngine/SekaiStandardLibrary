@@ -13,4 +13,6 @@ target_include_directories(SekaiStandardLibrary
     PUBLIC
         $<INSTALL_INTERFACE:include>
         $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include/external>
+    PRIVATE
+        ${PROJECT_SOURCE_DIR}/include/internal
 )

@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "SekaiStandardLibrary/SekaiStandardLibrary.h"  // Include your header file
+#include "SekaiStandardLibrary/primitive-types.h"
 
 TEST(SizeOfTest, PrimitiveTypes) {
     EXPECT_EQ(sizeof(sk_i8), 1);

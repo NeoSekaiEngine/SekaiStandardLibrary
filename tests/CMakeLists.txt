@@ -15,6 +15,7 @@ FetchContent_MakeAvailable(googletest)
 
 add_executable(SekaiStandardLibraryTest
     ./src/primitive-types.cpp
+    ./src/arraylist.hpp
     ./src/arraylist.cpp
 )
 
